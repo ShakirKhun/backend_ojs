@@ -21,6 +21,7 @@
 <body>
 	<div class="wrapper">
 		<div class="container">
+		{*
 			<div class="page_article">
 				<div class="page_description">
 					<!--<h1>{$displayPageHeaderLogo.altText|escape}</h1>-->
@@ -38,7 +39,6 @@
 					<!--<h3>{$displayPageHeaderTitle|escape}</h3>-->
 				</div>
 				<div class="page_description_bottom">
-					{* Search form *}
 					<!--{if $currentContext && $requestedPage !== 'search'}
 						<div class="pkp_navigation_search_wrapper">
 							<a href="{url page="search"}" class="pkp_search pkp_search_desktop">
@@ -58,8 +58,123 @@
 					</form>
 				</div>
 			</div>
-			<div class="main">
-				<div class="content">
+		*}
+			<div class="main d-block">
+				<section id="about">
+					<div class="container" >
+						<div class="row">
+
+						<div class="col-12 col-lg-6 col-md-12 col-sm-12 align-items-center d-flex flex-column justify-content-center">
+							{$additionalHomeContent}
+							<div class="container pt-1 ps-0">
+								<button class="btn btn-success mt-5">{translate key="about.button.journal.aim"}</button>
+							</div>
+
+							{* <h1>Профиль и<br>миссия журнала</h1>
+							<div class="container ps-0">
+								<div class="col-12 col-md-10 ps-0">
+									<p>
+									Международный рецензируемый журнал, способствующий распространению и обсуждению высококачественных статей по научному направлению «Искусство и гуманитарные науки». 
+									</p>
+									<p class="mt-4">
+									Академические тексты, предложенные в журнал, могут быть связаны с музыкальными событиями, театральными и балетными представлениями, киноиндустрией, художественными выставками и другими произведениями культуры.
+									</p>
+								</div>
+							</div>
+							<div class="container mt-5">
+								<div class="row lh-1">
+									<div class="col-5 p-0">
+										<div class="accent-color mb-3">Издатель:</div>
+										<div><a class="text-decoration-underline color-2F374A">Казахская национальная консерватория имени Курмангазы</a></div>
+									</div>
+									<div class="col-5 pe-0 ps-3 ms-5">
+										<div class="accent-color mb-3">Периодичность издания:</div>
+										<div class="color-2F374A">Ежеквартально (4 раза в год)<br>Издается с 2013 года;</div>
+									</div>
+								</div>
+								<div class="row pt-3">
+									<button class="btn btn-success mt-5">Цели журнала</button>
+								</div>
+							</div> *}
+
+						</div>
+						<div class="col-12 ms-auto col-md-12 col-sm-12 col-lg-6">
+							<div class="card" id="book-card">
+							{if !$activeTheme->getOption('useHomepageImageAsHeader') && $homepageImage}
+								<div class="homepage_image">
+									<img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}"
+										{if $homepageImage.altText} alt="{$homepageImage.altText|escape}" {/if} class="w-100">
+								</div>
+							{/if}
+							<div class="card-body ps-5 pt-0">
+								<div class="accent-color">{translate key="about.card.header"}</div>
+								<div class="card-title"><b>Saryn №1 (13) 2025-03-22</b></div>
+								<div class="container d-flex justify-content-start">
+									<div class="row ">
+										<div class="col ps-0 text-nowrap">
+										<div class="gray-small-text mt-2 mb-1">{translate key="locale.issn.printed"}</div>
+										<div class="text-dark">{$currentJournal->getData('printIssn')}</div>
+										</div>
+										<div class="col">
+										<div class="gray-small-text mt-2 mb-1"">{translate key="locale.issn.online"}</div>
+										<div class="text-dark">{$currentJournal->getData('onlineIssn')}</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</section>
+
+
+				<section id = "hero">
+					<div class="container p-0">
+						<div id = "square">
+							<div class="container h-100 " id="hero-content">
+								<div class="row align-items-center h-100">
+								<div class="col-12 col-md-12 col-sm-12 col-lg p-0">
+									<img src="{$baseUrl}/plugins/themes/healthSciences/img/hero-instrument.png" alt="Instrument">
+								</div>
+								<div class="col-12 col-md-12 col-sm-12 col-lg pe-5">
+									<h2 class="pe-5 lh-sm">{translate key="hero.h2"}</h2>
+									<div class="pe-5 mt-5">
+										<p class="lh-1 mb-0 fw-light">{translate key="hero.text"}</p>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+						<img src="{$baseUrl}/plugins/themes/healthSciences/img/hero-background.jpg" id = "hero-img">
+					</div>
+				</section>
+
+				<section id = "recommendation">
+					<div class="container">
+						<h2 class="accent-color" style="font-weight: 500">{translate key="recommendation.header"}</h2>
+						<p>“{translate key="recommendation.text"}”</p>
+					</div>
+				</section>
+
+				    
+				<section id = "partners">
+					<div class="container">
+						<ul class="list-group list-group-horizontal justify-content-between align-items-center">
+							<li class="list-group-item justify-content-center col "><a href="https://www.gov.kz/memleket/entities/quality/documents/details/520901?lang=ru"><img src="{$baseUrl}/plugins/themes/healthSciences/img/logo-edugov.png"></a></li>
+							<li class="list-group-item justify-content-center ex-sm-img col"><a href="https://www.budapestopenaccessinitiative.org/read/"><img src="{$baseUrl}/plugins/themes/healthSciences/img/logo-boai.png"></a></li>
+							<li class="list-group-item justify-content-center col"><a href="https://www.crossref.org/"><img src="{$baseUrl}/plugins/themes/healthSciences/img/logo-crossref.png"></a></li>
+							<li class="list-group-item justify-content-center col"><a href="https://www.ncste.kz/"><img src="{$baseUrl}/plugins/themes/healthSciences/img/logo-ncgt.png"></a></li>
+							<li class="list-group-item justify-content-center col"><a href="https://cyberleninka.ru/journal/n/saryn?i=1140972"><img src="{$baseUrl}/plugins/themes/healthSciences/img/logo-cyberleninka.png"></a></li>
+							<li class="list-group-item justify-content-center sm-img col partner-svg"><a href="https://www.rilm.org/resources.php?product=ram&type=music" class="d-flex justify-content-start align-items-center"><img src="{$baseUrl}/plugins/themes/healthSciences/img/logo-rilm.svg" class="h-50"></a></li>
+							<li class="list-group-item justify-content-center sm-img col ex-sm-img"><a href="https://elibrary.ru/title_about_new.asp?id=81325"><img src="{$baseUrl}/plugins/themes/healthSciences/img/logo-rinc.png" style="max-height: 70px"></a></li>
+						</ul>
+					</div>
+				</section>
+
+
+
+				{* <div class="content">
 
 					<div class="content_description">
 						{$additionalHomeContent}
@@ -84,9 +199,10 @@
 							<p>{$currentJournal->getData('onlineIssn')}</p>
 						</div>
 					</div>
-				</div>
+				</div> *}
+
 			</div>
-			<div class="partners-wrap">
+			{* <div class="partners-wrap">
 				<a href="https://www.ncste.kz/"><img src="/public/journals/1/logo/logo-ncgt.png"></a> 
 				<a href="https://www.gov.kz/memleket/entities/quality/documents/details/520901?lang=ru"><img src="/public/journals/1/logo/logo-edugov.png"></a>
 				<a href="https://www.rilm.org/resources.php?product=ram&type=music"><img src="/public/journals/1/logo/logo-rilm.svg"></a>
@@ -97,7 +213,7 @@
 				<a href=""><img src="/public/journals/1/logo/logo-openaccess.svg"></a>
 				<a href="https://www.nlrk.kz/index.php"><img src="/public/journals/1/logo/logo-nacbibleoteka.png"></a>
 				<a href="https://www.budapestopenaccessinitiative.org/read/"><img src="/public/journals/1/logo/logo-boai.webp"></a>
-			</div>
+			</div> *}
 		</div>
 	</div>
 </body>

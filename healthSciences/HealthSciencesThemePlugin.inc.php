@@ -63,6 +63,7 @@ class HealthSciencesThemePlugin extends ThemePlugin
 			'default' => 'none',
 		]);
 
+
 		// Update colour based on theme option
 		$additionalLessVariables = [];
 		if ($this->getOption('baseColour') !== '#10BECA') {

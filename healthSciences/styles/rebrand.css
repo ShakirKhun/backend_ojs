@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+
 
 *::-webkit-input-placeholder {
   color: #666;
@@ -68,6 +70,16 @@ body {
 
 main {
   background-color: #F9F9F9;
+}
+
+.wrapper {
+  background-color: #F9F9F9;
+  background: linear-gradient(0deg,rgb(255, 255, 255) 0%, rgb(249, 249, 249) 100%) !important;
+}
+
+
+div.main{
+  border:none  !important;
 }
 
 section{
@@ -653,6 +665,8 @@ header .navbar-nav .nav-item a{
   z-index: -1;
 }
 
+
+
 #menu .dropdown_menu:hover > .sub_menu {
   display: grid;
 }
@@ -705,11 +719,22 @@ header .navbar-nav .nav-item a{
   text-transform: uppercase;
 }
 
+/* #menu > li.dropdown_menu{
+  height: 100% !important;
+  display: inline-block !important;
+  margin-bottom: 0 !important;
+}
+
+#menu > li > a{
+  height: 100% !important;
+  height: 100% !important;
+} */
+
 
 #menu > li > ul{
   padding-top: 30px;
   padding-bottom: 30px;
-  margin-top:32px;
+  /* margin-top: 2px; */
 }
 
 #menu > li > ul > li{
@@ -788,6 +813,8 @@ p{
   width:180px;
   font-size:16px;
   border:none;
+  border-radius: 5px;
+  color: #FFF;
 }
 
 #about .btn-success:hover{
@@ -932,8 +959,13 @@ b{
   border: none;
 }
 
+
 #partners .sm-img{
   height:75%;
+}
+
+#partners .ex-sm-img{
+  height:50%;
 }
 
 footer{
@@ -1763,6 +1795,11 @@ span.badge{
   #copyright svg{
     width:14px;
   }
+
+  #menu{
+    padding-right: 13px !important;
+  }
+
 }
 
 @media screen and (max-width: 767px){
@@ -1778,14 +1815,34 @@ span.badge{
   height: 100%;
   } */
 
-  
-  #partners li{
+/*   
+  /* #partners li{
     height: 80%;
+  } */
+
+  #partners li{
+    padding: 0;
+  }
+
+  #partners ul.list-group{
+    gap: 10px;
   }
 
   #partners .sm-img{
-    height: 60%;
+    height: auto;
+    width: 60%;
   }
+
+  #partners .partner-svg img {
+    height: 100% !important;
+    width: auto;
+  }
+
+  #partners .ex-sm-img {
+    height: 70% !important;
+    width: auto;
+  }
+
   
 
   #square{
@@ -1924,6 +1981,10 @@ span.badge{
   #search_button button{
     height: 40px;
     width: 40px !important;
+  }
+
+  #menu{
+    width: 93vw !important;
   }
 
 

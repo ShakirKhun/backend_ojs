@@ -65,7 +65,40 @@
 						<div class="row">
 
 						<div class="col-12 col-lg-6 col-md-12 col-sm-12 align-items-center d-flex flex-column justify-content-center">
-							{$additionalHomeContent}
+
+							<div class="container ps-0 pe-5">
+								<h1>{$currentContext->getLocalizedData('additionalHomeContent')|strip_tags}</h1>
+							</div>
+							<div class="container ps-0">
+								<div class="col-12 col-md-10 ps-0">
+								{if $currentContext->getLocalizedData('aboutText')}
+									{$currentContext->getLocalizedData('aboutText')|strip_unsafe_html}
+								{/if}
+								</div>
+							</div>
+							<div class="container mt-5">
+								<div class="row lh-1">
+									<div class="col-5 p-0">
+										<div class="accent-color mb-3">{translate key="common.publisher"}:</div>
+										<div><a class="text-decoration-underline color-2F374A">
+											{$context = Application::get()->getRequest()->getContext()}
+											{$publisherMulti = $context->getLocalizedData('publisherMulti')}				
+											<p>
+												{$publisherMulti}
+											</p>
+											</a>
+										</div>
+									</div>
+										<div class="col-5 pe-0 ps-3 ms-5">
+										<div class="accent-color mb-3">{translate key="locale.publish.period"}:</div>
+										{$context = Application::get()->getRequest()->getContext()}
+										{assign var=publishedSince value=$context->getData('publishedSince')}
+										{assign var=publishedTimes value=$context->getData('publishedTimes')}
+										<div class="color-2F374A">{$publishedTimes}<br />{$publishedSince}</div>
+									</div>
+								</div>
+							</div>
+							
 							<div class="container pt-1 ps-0">
 								<button class="btn btn-success mt-5">{translate key="about.button.journal.aim"}</button>
 							</div>
@@ -108,7 +141,17 @@
 							{/if}
 							<div class="card-body ps-5 pt-0">
 								<div class="accent-color">{translate key="about.card.header"}</div>
-								<div class="card-title"><b>Saryn №1 (13) 2025-03-22</b></div>
+								{* <div class="card-title"><b>Saryn №1 (13) 2025-03-22</b></div> *}
+								<span>{$currentJournal->getLocalizedName()}</span>
+								{if empty($issues)}
+									<span>{translate key="current.noCurrentIssueDesc"}</span>
+								{else}
+									{assign var="latestIssue" value=$issues[0]}
+									{assign var=issueSeries value=$latestIssue->getIssueSeries()}
+									<span>{$issueSeries|escape}</span>
+								{/if}
+
+								<div class="card-title"><b></b></div>
 								<div class="container d-flex justify-content-start">
 									<div class="row ">
 										<div class="col ps-0 text-nowrap">
@@ -135,25 +178,45 @@
 							<div class="container h-100 " id="hero-content">
 								<div class="row align-items-center h-100">
 								<div class="col-12 col-md-12 col-sm-12 col-lg p-0">
-									<img src="{$baseUrl}/plugins/themes/healthSciences/img/hero-instrument.png" alt="Instrument">
+									{* <img src="{$baseUrl}/plugins/themes/healthSciences/img/hero-instrument.png" alt="Instrument"> *}
+									{if $currentContext->getLocalizedData('heroForeground')}
+										{assign var=heroForeground value=$currentContext->getLocalizedData('heroForeground')}
+											<img src="{$publicFilesDir}/{$heroForeground.uploadName|escape:"url"}"
+												{if $heroForeground.altText} alt="{$heroForeground.altText|escape}" {/if}>
+									{/if}
 								</div>
 								<div class="col-12 col-md-12 col-sm-12 col-lg pe-5">
-									<h2 class="pe-5 lh-sm">{translate key="hero.h2"}</h2>
+									<h2 class="pe-5 lh-sm">
+										{if $currentContext->getLocalizedData('heroTitle')}
+											{$currentContext->getLocalizedData('heroTitle')|strip_tags}
+										{/if}
+									</h2>
 									<div class="pe-5 mt-5">
-										<p class="lh-1 mb-0 fw-light">{translate key="hero.text"}</p>
+										<p class="lh-1 mb-0 fw-light">
+										{if $currentContext->getLocalizedData('heroText')}
+											{$currentContext->getLocalizedData('heroText')|strip_tags}
+										{/if}
+										</p>
 									</div>
 								</div>
 								</div>
 							</div>
 						</div>
-						<img src="{$baseUrl}/plugins/themes/healthSciences/img/hero-background.jpg" id = "hero-img">
-					</div>
+						{if $currentContext->getLocalizedData('heroBackground')}
+							{assign var=heroImage value=$currentContext->getLocalizedData('heroBackground')}
+								<img src="{$publicFilesDir}/{$heroImage.uploadName|escape:"url"}"
+									{if $heroImage.altText} alt="{$heroImage.altText|escape}" {/if} id = "hero-img">
+						{/if}
 				</section>
 
 				<section id = "recommendation">
 					<div class="container">
 						<h2 class="accent-color" style="font-weight: 500">{translate key="recommendation.header"}</h2>
-						<p>“{translate key="recommendation.text"}”</p>
+						<p>
+						{if $currentContext->getLocalizedData('recommendationText')}
+							{$currentContext->getLocalizedData('recommendationText')|strip_tags}
+						{/if}
+						</p>
 					</div>
 				</section>
 

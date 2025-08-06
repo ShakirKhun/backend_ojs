@@ -972,6 +972,7 @@ footer{
   font-family: Roboto;
   font-size: 12px;
   padding-bottom:20px;
+  background-color: #000000 !important;
 }
 
 footer li.list-group-item{
@@ -1005,6 +1006,124 @@ footer .social-media:hover rect{
 #footer-navigation{
   margin-top: -140px;
 }
+
+#footer-navigation #menu .sub_menu{
+  display: block ;
+  position: relative;
+  background-color: transparent;
+}
+
+#footer-navigation #menu .sub_menu::before{
+  display: none ;
+}
+
+#footer-navigation #menu,
+#footer-navigation #menu li,
+#footer-navigation #menu ul,
+#footer-navigation #menu > li > ul{
+  list-style-type: none;
+  padding-left: 0 !important;
+  width: 150px !important;
+}
+
+#footer-navigation #menu > li > a,
+#footer-navigation #menu > li > ul > li > a{
+  width: 150px !important;
+  /* font-size: 10px !important; */
+}
+
+#footer-navigation #menu > li > a{
+  color: #008283 !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
+
+#footer-navigation #menu > li > ul > li > a{
+  padding: 0 !important;
+  font-family: Roboto !important;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  color: #7c8795 !important;
+}
+
+
+
+
+
+
+
+#footer-navigation .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  align-items: start;
+}
+
+/* Let each li be a grid item */
+#footer-navigation .menu {
+  display: contents;
+}
+
+/* Row 1 */
+#footer-navigation .menu li:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#footer-navigation .menu li:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#footer-navigation .menu > li:nth-last-child(1){
+  margin-top: 23px;
+}
+
+#footer-navigation .container > a {
+  margin-top: 50px;
+  font-family: Inter !important;
+  color: #008283;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
+
+
+
+#footer-navigation .menu li:nth-last-child(1),
+#footer-navigation .menu li:nth-last-child(2),
+#footer-navigation .container > a {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+/* Row 2 */
+#footer-navigation .menu li:nth-child(3) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#footer-navigation .menu li:nth-child(4) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* Remaining li items (excluding first 4 and last 2) → row 2, column 3 */
+#footer-navigation .menu li:nth-child(n+5):not(:nth-last-child(-n+2)) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+/* Other elements like link, contact, address → row 2, column 3 */
+#footer-navigation .column-3-row-2{
+  grid-column: 3;
+  grid-row: 2;
+}
+
+
+
+
+
 
 #button-up{
   z-index: 1;

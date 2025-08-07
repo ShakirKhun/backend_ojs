@@ -83,7 +83,7 @@
 
 <header class = "container" id = "header">
   <div class="row align-items-center h-100">
-    <div class="col-4 col-md-2">
+    <div class="col-4 col-md-2 pb-5">
       <a href="{$homeUrl}">
         <img src="/public/journals/1/saryn-logo-white.svg" alt="Saryn Journal" class="img-fluid">
       </a>

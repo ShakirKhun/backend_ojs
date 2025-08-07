@@ -12,7 +12,7 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-8 col-md-3">
+        <div class="col-5 col-lg-3 mb-5 mb-lg-0">
           <svg width="218" height="140" viewBox="0 0 218 140" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M98.9881 56.1095H99.4928V51.8058H98.9881V56.1095Z" fill="#2B2A29"/>
             <path d="M103.87 56.1109H103.347L101.654 53.8328C101.592 53.7475 101.541 53.6739 101.499 53.6088C101.459 53.5436 101.43 53.4916 101.414 53.4536H101.4C101.412 53.5235 101.417 53.6716 101.417 53.8979V56.1109H100.958V52.8838H101.513L103.208 55.1773C103.245 55.227 103.276 55.2697 103.301 55.3053C103.326 55.3395 103.347 55.3691 103.364 55.3929C103.38 55.4177 103.395 55.4379 103.403 55.4534C103.412 55.4698 103.419 55.4816 103.425 55.4923H103.435C103.427 55.4463 103.421 55.3845 103.416 55.3063C103.412 55.228 103.41 55.1323 103.41 55.0185V52.8838H103.87V56.1109Z" fill="#2B2A29"/>
@@ -55,9 +55,9 @@
           </svg>
         </div>
 
-        <div class="col col-md-8"></div>
+        <div class="col col-lg-8"></div>
 
-        <div class="col-3 col-md-1 pe-0 d-flex justify-content-end">
+        <div class="col-3 col-lg-1 pe-0 d-flex justify-content-end align-items-center align-items-lg-start">
           <a href="#header" id="button-up">
             <button>
               <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,8 +70,8 @@
       </div>
 
       <div class="row" id="footer-navigation">
-        <div class="col col-md-3"></div>
-        <div class="col-12 col-md-8">
+        <div class="col col-lg-3"></div>
+        <div class="col-12 col-lg-8">
           <div class="container">
 
 
@@ -82,7 +82,7 @@
                 {$primaryMenu}
             {/if} 
             
-            <a href="{url router=$smarty.const.ROUTE_PAGE page="about" op="submissions"}">Отправка материалов</a>
+            <a href="{url router=$smarty.const.ROUTE_PAGE page="about" op="submissions"}" class="no-wrap">Отправка материалов</a>
             
             <div class="column-3-row-2">
               <div class="footer_contact_number">
@@ -154,11 +154,11 @@
             </div> *}
           </div>
         </div>
-        <div class="col col-md-1"></div>
+        <div class="col col-lg-1"></div>
       </div>
 
       <div class="row pb-4 socials">
-        <div class="col-12 col-md-6 d-flex align-items-center">
+        <div class="col-12 col-lg-6 d-flex align-items-center">
           <ul class="list-group list-group-horizontal">
             <li class="list-group-item">
               <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -182,10 +182,10 @@
             </li>
           </ul>
         </div>
-        <div class="col-12 col-md-6 d-flex justify-content-end">
+        <div class="col-12 col-lg-6 d-flex justify-content-end">
           <ul class="list-group list-group-horizontal ">
             <li class="list-group-item">
-              <a href="" class="social-media">
+              <a href="https://instagram.com/saryn.journal" class="social-media">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="48" height="48" rx="24" fill="#008283"/>
                   <path d="M28.4004 14C31.4271 14 33.8898 16.4628 33.8896 19.4893V28.4004C33.8896 31.4269 31.4271 33.8896 28.4004 33.8896H19.4883C16.462 33.8894 14 31.4268 14 28.4004V19.4893C14 16.4629 16.462 14.0002 19.4883 14H28.4004ZM19.4893 15.7656C17.4362 15.7658 15.7659 17.4362 15.7656 19.4893V28.4014C15.7656 30.4548 17.436 32.1259 19.4893 32.126H28.4014C30.3908 32.126 32.0213 30.5579 32.1211 28.5928L32.126 28.4014V19.4893C32.1257 17.4361 30.4547 15.7656 28.4014 15.7656H19.4893ZM23.9453 18.8203C26.7713 18.8203 29.0703 21.1193 29.0703 23.9453C29.0703 26.7712 26.7713 29.0703 23.9453 29.0703C21.1193 29.0703 18.8203 26.7712 18.8203 23.9453C18.8203 21.1194 21.1194 18.8203 23.9453 18.8203ZM23.9463 20.5859C22.0933 20.5859 20.5859 22.0933 20.5859 23.9463C20.5859 25.7991 22.0935 27.3066 23.9463 27.3066C25.7991 27.3066 27.3066 25.7991 27.3066 23.9463C27.3066 22.0933 25.7992 20.5859 23.9463 20.5859ZM29.2861 17.3242C29.6272 17.3242 29.9612 17.4621 30.2012 17.7031C30.4423 17.9431 30.58 18.277 30.5801 18.6182C30.5801 18.9582 30.4423 19.292 30.2012 19.5332C29.96 19.7732 29.6273 19.9121 29.2861 19.9121C28.9462 19.9121 28.612 19.7732 28.3721 19.5332C28.1311 19.292 27.9922 18.9582 27.9922 18.6182C27.9922 18.2771 28.1309 17.9431 28.3721 17.7031C28.6121 17.462 28.9462 17.3243 29.2861 17.3242Z" fill="white"/>
@@ -193,7 +193,7 @@
               </a>
             </li>
             <li class="list-group-item">
-              <a href="" class="social-media">
+              <a href="https://t.me/sarynjournal" class="social-media">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="48" height="48" rx="24" fill="#008283"/>
                   <path d="M34.2647 14.4278C33.98 14.1909 33.6364 14.0357 33.2704 13.9786C32.9045 13.9215 32.5299 13.9647 32.1866 14.1036L14.2657 21.3389C13.8824 21.4966 13.5562 21.7671 13.3303 22.1145C13.1043 22.462 12.9894 22.8699 13.0008 23.2841C13.0121 23.6984 13.1492 24.0994 13.3937 24.434C13.6383 24.7685 13.9789 25.0208 14.3702 25.1573L17.9952 26.418L20.0157 33.0997C20.0431 33.1889 20.083 33.2739 20.134 33.352C20.1418 33.364 20.1527 33.373 20.161 33.3846C20.22 33.467 20.2913 33.5397 20.3724 33.6004C20.3955 33.618 20.4175 33.6345 20.4422 33.6501C20.5371 33.7131 20.6423 33.7591 20.7529 33.7862L20.7648 33.7872L20.7715 33.7901C20.838 33.8036 20.9057 33.8105 20.9736 33.8106C20.9802 33.8106 20.986 33.8074 20.9924 33.8073C21.0949 33.8055 21.1965 33.7879 21.2935 33.755C21.3161 33.7473 21.3355 33.7345 21.3574 33.7252C21.4297 33.6952 21.4983 33.6567 21.5617 33.6106C21.6124 33.5679 21.6631 33.5251 21.7139 33.4824L24.416 30.4991L28.4463 33.6211C28.8011 33.8974 29.2379 34.0475 29.6875 34.0479C30.1587 34.0473 30.6154 33.8847 30.9809 33.5874C31.3465 33.2901 31.5987 32.8762 31.6954 32.4151L34.958 16.3985C35.032 16.038 35.0065 15.6642 34.8844 15.3171C34.7623 14.9699 34.5481 14.6626 34.2647 14.4278ZM21.3702 26.7364C21.2315 26.8745 21.1367 27.0505 21.0977 27.2422L20.7882 28.7462L20.0041 26.1532L24.0694 24.0362L21.3702 26.7364ZM29.6719 32.0401L24.9092 28.3506C24.71 28.1966 24.46 28.1234 24.2092 28.1455C23.9583 28.1675 23.725 28.2833 23.5557 28.4697L22.6903 29.4249L22.9961 27.9385L30.0791 20.8555C30.2482 20.6867 30.3512 20.4628 30.3695 20.2246C30.3878 19.9864 30.3201 19.7495 30.1788 19.5568C30.0375 19.3641 29.8319 19.2285 29.5992 19.1743C29.3664 19.1202 29.122 19.1512 28.9102 19.2617L18.7449 24.5544L15.0205 23.1915L32.999 15.999L29.6719 32.0401Z" fill="white"/>
@@ -201,7 +201,7 @@
               </a>
             </li>
             <li class="list-group-item">
-              <a href="" class="social-media">
+              <a href="https://www.facebook.com/sarynjournal" class="social-media">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="48" height="48" rx="24" fill="#008283"/>
                   <path d="M27.12 17.32H29V14.14C28.0897 14.0454 27.1751 13.9986 26.26 14C23.54 14 21.68 15.66 21.68 18.7V21.32H18.61V24.88H21.68V34H25.36V24.88H28.42L28.88 21.32H25.36V19.05C25.36 18 25.64 17.32 27.12 17.32Z" fill="white"/>
@@ -217,8 +217,8 @@
           <ul class="list-group list-group-horizontal d-flex justify-content-between w-100" id="copyright">
             <li class="list-group-item ps-0">© 2025 Sarynjournal-International Peer-Reviewed journal</li>
             <li class="list-group-item pe-0 ps-0">
-              <div>
-                <span>Разработка сайта — Zerone Technology</span>
+
+                <span><a href="https://zeronetech.kz" target="_blank"> {translate key="footer.developers"}:&nbsp; — Zerone Technology</a></span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <rect width="20" height="20" fill="url(#pattern0_98_5038)"/>
                   <defs>
@@ -228,46 +228,13 @@
                   <image id="image0_98_5038" width="20" height="20" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAytJREFUOE91Vb1LI1EQn3GLqCCI2ileLATL6w0YP4nVyf0DWa4IIki+jHE1YRNUFEEvJ8iCIEcsbCz8KKzTWV5ObASJCtoagyBYZOeccd+SaG4g2Zed+f3evN/MmyA0MF3X2z0eT9C2bT8AfAWALwCAAHALAEXbto/39vbyjbAcVGehUGjqjeA3ALQDADnOujgiIkS80zQtY1lWHXFd4PT0dA4Rww7g02a1O6uYarWa3d3dzSifC5qZmckgokkkSfEX+zgTVGDHB4gIvHae7P5lWVaUgUI4OzurO8dsJEvDdx6PB15fX5lYMqhWq98tyzoWwnA4fAMAXqVZLpfDq6srODg4gEqlIoRerxeGhoagq6sLOjs7obW1FSKRSO1mT5VKpQ9jsZhORFwE96hbW1tu4P7+PhSLRRgYGIBQKFSXbSwWq5WH1xGMx+NHb60wpfRgzRjY398v4JeXF1hdXYXm5mYYHx+Hnp4e+bDNzc0pQrXRCSYSiT9Or72n6GgyOjoKgUBAJDk7O4NCoSD+4eFhmJyclHUikZCiKRwi3mIymbSdSsr7mgAwTRNaWlrg/v4ednZ2hIR1DAQCsjYMQyXhYtEwDCZRbeB2CEfE43Hs6OiAx8dH2NzcFJ/f74eJiQkhWlxclCd3lttmS0tLN4iorpY4GdjW1gbz8/MCuL6+hnw+Lz6fz4eKMJ1OK+2EkIiKmE6njxBxquZ2EPdYMBjE7u5uARweHsLl5aX0GxNycdhM03Qzc6Q/wWw2y1ctpzqfAzkz1o6tXC7D9va2q5XP54OxsTH5nc1mVYbytG1bx0wm065pWumNlIeB1CSVSklAqVSC09NTen5+VkAcHByEkZER+b2ysuJqb9v2nWmafVLy5eVlnjB8dNGJ2+Xi4gIeHh5qM5DjcQ/29vYK0fn5uVTXKYieSqXy7nBYX1//SUR1d0minSGggGpAqOq+TzLMGIYh568bUWtra2ZTU5PpELk+py2Y/MPwIY7JLSwsyKT5RMgvNjY2dCYlIh4WdVZbOCIqE9GPZDJ5XBv03yHKxJqmfWNiROS/ATaeSn+JqKBpWj4ajT593PQfPP2HbT3kFfsAAAAASUVORK5CYII="/>
                   </defs>
                 </svg>
-              </div>
-
             </li>
           </ul>
         </div>
       </div>
+
     </div>
 
-
-
-    {* <div class="container">
-        <div class="footer_top">
-            <div class="footer_contact_number">
-                <p class="info_text">{translate key="locale.contacts.info"}</p>
-                <p><a href ="mailto:{$currentJournal->getData('contactEmail')}">{$currentJournal->getData('contactEmail')}</a></p>
-                <a href="tel:{$currentJournal->getData('contactPhone')}">{$currentJournal->getData('contactPhone')}</a>
-            </div>
-            <div class="footer_address">
-                <p class="info_text">{translate key="locale.address.info"}</p>
-                <!-- <p>{$currentJournal->getData('mailingAddress')}</p> -->
-                <p>{$pageFooter}</p>
-            </div>
-            <div class="footer_network">
-                <p class="info_text">{translate key="locale.social.media"}</p>
-                <div class="networks">
-                    <a href="https://www.facebook.com/sarynjournal"><img src="/plugins/themes/healthSciences/img/logo-facebook.png" alt=""></a>
-                    <a href="https://t.me/sarynjournal"><img src="/plugins/themes/healthSciences/img/logo-telegram.png" alt=""></a>
-                    <a href="https://instagram.com/saryn.journal"><img src="/plugins/themes/healthSciences/img/logo-instagram.png" alt=""></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer_bottom">
-            <p class="info_text"><a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><span id="cc-logo" class="icon"><img style="width: 40px;" alt="cc logo" src="/plugins/themes/healthSciences/img/cc_icon_white_x2.png"></span>
-<span id="cc-attribution" class="icon"><img style="width: 40px;" src="/plugins/themes/healthSciences/img/attribution_icon_white_x2.png"></span>
-<span id="cc-attribution" class="icon"><img style="width: 40px;" src="/plugins/themes/healthSciences/img/logo_1122.png"></span>
-<span id="cc-attribution" class="icon"><img style="width: 40px;" src="/plugins/themes/healthSciences/img/logo_1123.png"></span>
-</a></p>
-            <p class="info_text">{translate key="footer.developers"}:&nbsp;<a href="https://zeronetech.kz" target="_blank"> Zerone Technology <img src="/plugins/themes/healthSciences/img/zerone_logo.png" alt=""></a></p>
-        </div>
-    </div> *}
 </footer>
 
 {* Load author biography modals if they exist *}

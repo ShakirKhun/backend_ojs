@@ -223,7 +223,22 @@
 				    
 				<section id = "partners">
 					<div class="container">
-						<ul class="list-group list-group-horizontal justify-content-between align-items-center">
+						{if $currentContext->getLocalizedData('partnersField')}
+							{$currentContext->getLocalizedData('partnersField')}
+						{/if}
+
+						{* <ul class="list-group list-group-horizontal justify-content-between align-items-center">
+							<li class="list-group-item justify-content-center col "><a href="https://www.gov.kz/memleket/entities/quality/documents/details/520901?lang=ru"><img src="https://ojs34.seopro.kz/plugins/themes/healthSciences/img/logo-edugov.png"></a></li>
+							<li class="list-group-item justify-content-center ex-sm-img col"><a href="https://www.budapestopenaccessinitiative.org/read/"><img src="https://ojs34.seopro.kz/plugins/themes/healthSciences/img/logo-boai.png"></a></li>
+							<li class="list-group-item justify-content-center col"><a href="https://www.crossref.org/"><img src="https://ojs34.seopro.kz/plugins/themes/healthSciences/img/logo-crossref.png"></a></li>
+							<li class="list-group-item justify-content-center col"><a href="https://www.ncste.kz/"><img src="https://ojs34.seopro.kz/plugins/themes/healthSciences/img/logo-ncgt.png"></a></li>
+							<li class="list-group-item justify-content-center col"><a href="https://cyberleninka.ru/journal/n/saryn?i=1140972"><img src="https://ojs34.seopro.kz/plugins/themes/healthSciences/img/logo-cyberleninka.png"></a></li>
+							<li class="list-group-item justify-content-center sm-img col partner-svg"><a href="https://www.rilm.org/resources.php?product=ram&type=music" class="d-flex justify-content-start align-items-center"><img src="https://ojs34.seopro.kz/plugins/themes/healthSciences/img/logo-rilm.svg" class="h-50"></a></li>
+							<li class="list-group-item justify-content-center sm-img col ex-sm-img"><a href="https://elibrary.ru/title_about_new.asp?id=81325"><img src="https://ojs34.seopro.kz/plugins/themes/healthSciences/img/logo-rinc.png" style="max-height: 70px"></a></li>
+						</ul> *}
+
+
+						{* <ul class="list-group list-group-horizontal justify-content-between align-items-center">
 							<li class="list-group-item justify-content-center col "><a href="https://www.gov.kz/memleket/entities/quality/documents/details/520901?lang=ru"><img src="{$baseUrl}/plugins/themes/healthSciences/img/logo-edugov.png"></a></li>
 							<li class="list-group-item justify-content-center ex-sm-img col"><a href="https://www.budapestopenaccessinitiative.org/read/"><img src="{$baseUrl}/plugins/themes/healthSciences/img/logo-boai.png"></a></li>
 							<li class="list-group-item justify-content-center col"><a href="https://www.crossref.org/"><img src="{$baseUrl}/plugins/themes/healthSciences/img/logo-crossref.png"></a></li>
@@ -231,7 +246,7 @@
 							<li class="list-group-item justify-content-center col"><a href="https://cyberleninka.ru/journal/n/saryn?i=1140972"><img src="{$baseUrl}/plugins/themes/healthSciences/img/logo-cyberleninka.png"></a></li>
 							<li class="list-group-item justify-content-center sm-img col partner-svg"><a href="https://www.rilm.org/resources.php?product=ram&type=music" class="d-flex justify-content-start align-items-center"><img src="{$baseUrl}/plugins/themes/healthSciences/img/logo-rilm.svg" class="h-50"></a></li>
 							<li class="list-group-item justify-content-center sm-img col ex-sm-img"><a href="https://elibrary.ru/title_about_new.asp?id=81325"><img src="{$baseUrl}/plugins/themes/healthSciences/img/logo-rinc.png" style="max-height: 70px"></a></li>
-						</ul>
+						</ul> *}
 					</div>
 				</section>
 

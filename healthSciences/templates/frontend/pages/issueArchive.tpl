@@ -23,57 +23,41 @@
 {/capture}
 {include file="frontend/components/header.tpl" pageTitleTranslated=$pageTitle}
 
+
 <div class="wrapper">
-	<div class="container">
-		{if $section}
-			{include file="frontend/components/breadcrumbs_archive.tpl" currentTitle=$section->getLocalizedTitle()}
-		{else}
-			{include file="frontend/components/breadcrumbs_archive.tpl" currentTitleKey="common.publication"}
-		{/if}
-		<div class="page_article" style="border-bottom:unset; padding: 20px 0 0 0;">
-			<div class="page_description">
-				<h2>{$pageTitle|escape}</h2>
-			</div>
-		</div>
-		<div class="main archive_page">
-			<div class="archive_content">
-				<div class="new_format">
-					{* No issues have been published *}
-					{if empty($issues)}
-						<p>{translate key="current.noCurrentIssueDesc"}</p>
-					{* List issues *}
-					{else}
+	<section id="archive">
+		<div class="container">
+			<div class="row">
+                <h1>{$pageTitle|escape}</h1>
+            </div>
 
-					<ul style="display:none">
-	              <li>
-	              	<ul>
+			{* No issues have been published *}
+			{if empty($issues)}
+				<p>{translate key="current.noCurrentIssueDesc"}</p>
+			{else}
 
+				<div class="row">
 					{foreach from=$issues item="issue"}
 						{if $issue->getYear() != $lastYear}
-							
-									</ul> <!-- UL element -->
-		            </li>
-		          </ul> <!-- UL year {$lastYear} -->
-
-							<ul class="archive_select">
-	              <li><span>{$issue->getYear()}</span>
-				  	<img src="http://sarynjournal.kz/plugins/themes/healthSciences/img/archive_dropdown.png">
-	              	<ul>
+							<div class="row">
+								<h2>{$issue->getYear()}</</h2>
+							</div>
 						{/if}
-						{assign var=lastYear value=$issue->getYear()}
-						{include file="frontend/objects/issue_summary.tpl"}
-          {/foreach}
-          </ul> <!-- UL element -->
-		            </li>
-		          </ul> <!-- UL year {$lastYear} -->	
-					{/if}
+							{assign var=lastYear value=$issue->getYear()}
+							{include file="frontend/objects/issue_summary.tpl"}
+					{/foreach}
 				</div>
-			</div>
+			{/if}
+
+			{$context = Application::get()->getRequest()->getContext()}
+			{$archiveDesc = $context->getLocalizedData('archiveDesc')}
+			{$archiveDesc}
+
+
+            
 		</div>
-		{$context = Application::get()->getRequest()->getContext()}
-		{$archiveDesc = $context->getLocalizedData('archiveDesc')}
-		{$archiveDesc}
-	</div>
+	</section>
 </div>
+
 
 {include file="frontend/components/footer.tpl"}

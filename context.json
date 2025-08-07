@@ -970,6 +970,13 @@
 			"validation": [
 				"nullable"
 			]
+		},
+		"partnersField": {
+			"type": "string",
+			"multilingual": true,
+			"validation": [
+				"nullable"
+			]
 		}
 	}
 }

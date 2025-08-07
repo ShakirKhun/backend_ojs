@@ -127,6 +127,15 @@ class PKPAppearanceAdvancedForm extends FormComponent
                 'toolbar' => 'bold italic superscript subscript | link | blockquote bullist numlist | image | code',
                 'plugins' => 'paste,link,lists,image,code',
                 'uploadUrl' => $imageUploadUrl,
-            ]));
+            ]))
+			->addField(new FieldRichTextarea('partnersField', [
+				'label' => __('manager.setup.partnersField'),
+				'description' => __('manager.setup.partnersField.description'),
+				'isMultilingual' => true,
+				'value' => $context->getData('partnersField'),
+				'toolbar' => 'bold italic superscript subscript | link | blockquote bullist numlist | image | code',
+				'plugins' => 'paste,link,lists,image,code',
+				'uploadUrl' => $imageUploadUrl,
+			]));
     }
 }

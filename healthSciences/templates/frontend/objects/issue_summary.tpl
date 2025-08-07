@@ -14,14 +14,23 @@
 {/if}
 {assign var=issueSeries value=$issue->getIssueSeries()}
 {assign var=issueCover value=$issue->getLocalizedCoverImageUrl()}
-<li>
-	{if $issueTitle}
-		<a class="cover" href="{url op="view" path=$issue->getBestIssueId()}">
-			<img loading="lazy" src="{$issueCover|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:''}">
-			{if $issueTitle && $issueSeries}
-					{$issueSeries|escape}
-			{/if}
+
+
+{if $issueTitle}
+	<div class="col-12 col-md-6 col-lg-6 col-xl-3">
+		<a href="{url op="view" path=$issue->getBestIssueId()}">
+			<div class="card">
+				<img src="{$issueCover|escape}" class="card-img-top" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:''}">
+				<div class="card-body">
+					<h3 class="card-title">
+						{if $issueTitle && $issueSeries}
+								{$issueSeries|escape}
+						{/if}
+					</h3>
+				</div>
+			</div>
 		</a>
-	{/if}
-</li>
+	</div>
+{/if}
+
 <!-- .obj_issue_summary -->

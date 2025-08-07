@@ -1581,13 +1581,13 @@ msgid "about.submissions"
 msgstr "Отправка материалов"
 
 msgid "about.onlineSubmissions.login"
-msgstr "Войти в систему"
+msgstr "Вход"
 
 msgid "about.onlineSubmissions.register"
-msgstr "Зарегистрироваться"
+msgstr "Регистрация"
 
 msgid "about.onlineSubmissions.registrationRequired"
-msgstr "Для отправки материала вам нужно {$login} или {$register}."
+msgstr "<h2 class=\"text-uppercase\">Для отправки материала вам нужно</h2><p class=\"mt-5\">{$login} или {$register}.</p>"
 
 msgid "about.onlineSubmissions.submissionActions"
 msgstr "{$newSubmission} или {$viewSubmissions}."

@@ -1550,7 +1550,7 @@ span.badge{
 
 
 #article{
-  padding-bottom: 200px;
+  padding-bottom: 60px;
   padding-top: 60px;
   background: #ffffff;
   background: linear-gradient(0deg,rgba(255, 255, 255, 1) 0%, rgba(249, 249, 249, 1) 100%);
@@ -1560,6 +1560,7 @@ span.badge{
   font-family: 'Cormorant Garamond';
   font-size: 60px;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 #article h2{
@@ -1574,7 +1575,18 @@ span.badge{
 }
 
 #article a{
-  color:#4A596B;
+  color:#008283;
+  font-family: Roboto;
+  font-size: 16px;
+}
+
+#article .submissions-checklist p{
+  margin-bottom: 0 !important;
+}
+
+#article .submissions-checklist ol > li{
+  margin-bottom: 5px !important;
+  line-height: 120%;
 }
 
 
@@ -1587,7 +1599,8 @@ span.badge{
 }
 
 #article .col p{
-  margin-bottom: 12px;
+  margin-bottom: 15px;
+  line-height: 120%;
 }
 
 #article aside{
@@ -1696,6 +1709,15 @@ span.badge{
   padding: 40px;
   border-radius: 10px;
   margin-top: 10px !important;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-family: Roboto;
+  width: 100%;
+}
+
+#alert-card .col-12,
+#alert-card .col-12 a{
+  color: #FFF;
 }
 
 #alert-card p{
@@ -1715,11 +1737,23 @@ span.badge{
   font-family: Roboto;
   padding: 0 20px;
   margin-top: 20px;
+  border: 1.5px solid #FFFFFF;
+  border-radius: 5px;
 }
 
 #alert-card button:hover{
   color: #007C81;
 }
+
+#alert-card > .d-flex > a{
+  color: #FFFFFF !important;
+  display: inline;
+  padding: 0 5px;
+  text-decoration: underline;
+
+}
+
+
 
 @media screen and (max-width: 767px){
   #alert-card{

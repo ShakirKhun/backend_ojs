@@ -1587,7 +1587,7 @@ msgid "about.onlineSubmissions.register"
 msgstr "Register"
 
 msgid "about.onlineSubmissions.registrationRequired"
-msgstr "{$login} or {$register} to make a submission."
+msgstr "<h2 class=\"text-uppercase\">To make a submission</h2><p class=\"mt-5\">{$login} or {$register}.</p>"
 
 msgid "about.onlineSubmissions.submissionActions"
 msgstr "{$newSubmission} or {$viewSubmissions}."

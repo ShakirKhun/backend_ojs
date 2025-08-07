@@ -1993,7 +1993,8 @@ msgid "about.onlineSubmissions.register"
 msgstr "Тіркелу"
 
 msgid "about.onlineSubmissions.registrationRequired"
-msgstr "Материалды жіберу үшін {$login} немесе {$register қажет}."
+msgstr "<h2 class=\"text-uppercase\">Материалды жіберу үшін</h2><p class=\"mt-5\">{$login} {$login} немесе {$register} қажет.</p>"
+
 
 msgid "about.onlineSubmissions.submissionActions"
 msgstr "{$newSubmission} немесе {$viewSubmissions}."

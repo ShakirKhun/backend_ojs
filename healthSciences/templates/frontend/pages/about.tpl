@@ -11,7 +11,29 @@
  * @uses $currentContext Journal|Press The current journal or press
  *}
 {include file="frontend/components/header.tpl" pageTitle="about.aboutContext"}
+
 <div class="wrapper">
+	<section id="article">
+		<div class="container">
+			<div class="row">
+				<div class="col"></div>
+				<div class="col col-12 col-lg-7">
+					<div class="row">
+						<h1 class="accent-color">{translate key="about.aboutContext"}</h1>
+					</div>
+					<div class="row">
+						{$currentContext->getLocalizedSetting('about')}
+						{include file="frontend/components/editLink.tpl" page="management" op="settings" path="context" anchor="masthead" sectionTitleKey="about.aboutContext"}
+					</div>
+				</div>
+				<div class="col"></div>
+			</div>
+		</div>
+	</section>
+</div>
+
+
+{* <div class="wrapper">
 	<div class="container">
 		<div class="page_article collegiya_page">
 			<div class="page_description">
@@ -27,6 +49,6 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> *}
 
 {include file="frontend/components/footer.tpl"}

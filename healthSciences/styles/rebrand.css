@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 *::-webkit-input-placeholder {
@@ -1570,6 +1571,15 @@ span.badge{
   font-weight: 700;
 }
 
+#article strong{
+  font-family: 'Cormorant Garamond';
+  font-size: 30px;
+  color:#4C5578;
+  font-weight: 700;
+}
+
+
+
 #article p{
   color:#4A596B;
 }
@@ -1762,36 +1772,114 @@ span.badge{
 }
 
 
-#collegium b{
-  font-family: Roboto;
-  font-weight: 500;
-  font-size: 18px;
+#collegium h1{
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
-#collegium h2{
-  font-size: 40px;
-  color: #007C81;
+#collegium h1:nth-of-type(2){
+  margin-top: 80px;
 }
 
 #collegium p{
   font-size: 14px;
 }
 
-.collegium-participants > div.col-12{
-  margin-bottom: 30px;
+#collegium .person-name strong{
+  font-size: 40px;
+  color: #007C81;
+}
+
+#collegium .person p:nth-of-type(n+3) :is(a, a u){
+  background-color: #D9D9D9;
+  padding: 6px 6px;
+  border-radius: 7px;
+  white-space: nowrap;
+}
+
+#collegium .person p:nth-of-type(n+3){
+  margin-top: 20px;
 }
 
 
-#collegium .collegium-participants > div.col-12{
-  padding-right: 25px;
+
+#collegium .person :is(a, a u){
+  color: #4C5578;
+  text-decoration: none !important;
+}
+
+#collegium .person img{
+  display: none;
+}
+
+#collegium {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+#collegium h1 {
+  grid-column: 1 / -1; 
+}
+
+.person {
+  box-sizing: border-box;
+  border: none;
+  width: 90%;
+}
+
+@media screen and (max-width: 1199px){
+  #collegium {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 991px){
-  #collegium div.row.collegium-participants{
-    margin-top: 0;
+  #collegium {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 20px;
   }
 
+  #collegium h1 {
+    font-size: 50px;
+  }
+
+  .person {
+    width: 100%;
+  }
 }
+
+
+@media screen and (max-width: 575px){
+  #collegium {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 20px;
+  }
+
+  #collegium h1 {
+    font-size: 30px;
+  }
+
+  .person {
+    width: 100%;
+  }
+
+  #collegium .person-name strong{
+    font-size: 30px;
+    color: #007C81;
+  }
+
+  #collegium .person p:nth-of-type(n+3) :is(a, a u){
+    font-size: 12px;
+  }
+}
+
+
+
+
+
+
+
 
 
 
@@ -2275,4 +2363,166 @@ span.badge{
 
 
 
+}
+
+
+/* 
+#menu{
+  display: inline-block;
+}
+
+#menu > li > a{
+  font-family: Inter !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  color: #4C5578 !important;
+}
+
+#menu .dropdown_menu {
+  position: relative;
+}
+
+#menu .sub_menu {
+  position: absolute;
+  display: none;
+  background-color: #7C8794 ;
+  padding-right: 150vw;
+  z-index: 1000;
+  display: none;
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: column;
+  column-gap: 40px;  
+}
+
+#menu .sub_menu::before {
+  content: "";
+  position: absolute;
+  left: -100vw;
+  width: 100vw; 
+  height: 100%;
+  background-color: #7C8794;
+  z-index: -1;
+}
+
+
+
+#menu .dropdown_menu:hover > .sub_menu {
+  display: grid;
+}
+
+#menu .sub_menu:hover {
+  display: grid;
+}
+
+#menu > li > ul.sub_menu{
+  padding-left: 0px !important;
+}
+
+#menu > li > ul.sub_menu > li{
+  padding-left: 0 !important;
+}
+
+#menu > li > a.dropdown{
+  height: 86px !important;
+  line-height: 86px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+#menu > li > a:hover{
+  color: #008283 !important;
+  fill: #008283 !important;
+}
+
+#menu + a:hover > svg > path{
+  fill: #008283 !important;
+}
+
+#menu a.dropdown_item {
+  color: #FFF !important;
+  font-family: Inter !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+}
+
+
+#menu ul.sub_menu > li > a.dropdown-item{
+  color: #FFF !important;
+  font-family: Inter !important;
+  font-size: 16px !important;
+  text-transform: lowercase;
+}
+
+
+#menu ul.sub_menu > li > a.dropdown-item::first-letter{
+  text-transform: uppercase;
+}
+
+#menu > li > ul{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#menu > li > ul > li{
+  margin-bottom: 0px;
+  width: 100%;
+  text-overflow: visible ;
+  white-space: nowrap
+} */
+
+/* 
+#menu  ul.sub_menu.dropdown-content{
+  padding-top: 10px !important;
+}
+
+#hidden-nav > div.container > #menu > li > a{
+  color: #ffffff !important;
+  height: 100% !important;
+  margin-bottom: 0;
+  line-height: normal;
+  display: block;
+  padding: 7px 0;
+}
+
+#hidden-nav > div.container > #menu > li > a{
+  color: #ffffff !important;
+  height: 100% !important;
+  margin-bottom: 0;
+  line-height: normal;
+  display: block;
+  padding: 7px 0;
+  display: flex !important;
+}
+
+
+
+#hidden-nav > div.container > #menu > li > ul{
+  padding-bottom: 12px;
+} */
+
+/* for aside to override previous styles */
+
+/* aside #menu .sub_menu{
+  display: block;
+  position: relative;
+  padding: 0;
+}
+
+
+aside #menu .sub_menu::before {
+  content: none;
+}
+
+
+
+aside #menu .dropdown_menu:hover > .sub_menu {
+  display: block;
+}
+
+aside #menu > li{
+  display: block !important;
+} */
+
+aside .sideNavUl > li{
+  display: block !important;
 }

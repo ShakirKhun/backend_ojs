@@ -53,7 +53,7 @@
 							</div>
 							<div class="col-12 col-xl-4 d-flex justify-content-start align-items-end pe-0">
 								<a href="{url page="user" op="register"}"><button class="btn btn-outline-light">{translate key="about.onlineSubmissions.register"}</button></a>
-								<a href="{url page="login"}"><button class="btn btn-outline-light ms-3">{translate key="about.onlineSubmissions.login"}</button></a>
+								<a href="{url page="login"}"><button class="btn btn-outline-light ms-2">{translate key="about.onlineSubmissions.login"}</button></a>
 							</div>
 						{/if}
 					</div>
